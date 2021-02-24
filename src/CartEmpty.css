@@ -1,0 +1,21 @@
+.cart__emptyContainer {
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  height: 300px;
+  /* margin: 30px 20px; */
+  padding: 20px;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+/* .cart__empty {
+  height: calc(100vh - 90px);
+} */
+.cart__emptyImage {
+  flex: 1;
+  max-width: 400px;
+  min-width: 200px;
+  max-height: 200px;
+  object-fit: contain;
+  margin-right: 20px;
+}

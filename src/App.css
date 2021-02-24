@@ -1,38 +1,57 @@
-.App {
-  text-align: center;
+.app {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid red; */
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.amazon-btn {
+  font-size: 12px;
+  color: #000;
+  padding: 6px 10px;
+  margin-right: 10px;
+  border: 1px solid;
+  border-radius: 3px;
+  cursor: pointer;
 }
-
-@media (prefers-reduced-motion: no-preference) {
+.primary-btn {
+  background: linear-gradient(#faecc8, #f0c14c);
+  border-color: #a88734 #846a29 #9c7e31;
+}
+.primary-btn:hover {
+  background: linear-gradient(#ffe5a5, #ffc93f);
+}
+.second-btn {
+  background: linear-gradient(#fbfbfc, #e7e9ec);
+  border-color: #adb1b8 #8d9096 #a2a6ac;
+}
+.second-btn:hover {
+  background: linear-gradient(#f0f0f0, #d5d7db);
+}
+.big-price {
+  font-size: 21px;
+  font-weight: 500;
+}
+.form-label {
+  margin: 5px;
+  font-size: 13px;
+  font-weight: 600;
+}
+.unselectable {
+  /* webkit-user-select: none; Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+/* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
+} */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
+/* @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
-}
+} */

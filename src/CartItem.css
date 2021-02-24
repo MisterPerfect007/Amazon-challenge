@@ -1,0 +1,68 @@
+.cartItem {
+  position: relative;
+  display: flex;
+  padding: 20px 0;
+  border-bottom: 1px solid #dddddd;
+}
+.cartItem__image {
+  width: 150px;
+  max-height: 150px;
+  object-fit: contain;
+  margin-right: 10px;
+}
+.cartItem__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.cartItem__infoTitle {
+  font-size: 18px;
+  margin-right: 100px;
+  color: #00718c;
+}
+.cart__infoManage {
+  display: flex;
+  align-items: center;
+}
+.cart__infoQty {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #f0f2f2;
+  margin-right: 10px;
+  border-radius: 3px;
+  border: 1px solid #d5d8d8;
+  box-shadow: rgba(33, 35, 38, 0.2) 0px 10px 10px -10px;
+}
+.cart__infoQtyMinus,
+.cart__infoQtyPlus {
+  /* border: 1px solid red;  */
+  padding: 5px 10px;
+  background: #b6b6b6;
+  cursor: pointer;
+
+  /* border: 1px solid #c2c2c2;
+  background: #aaaaaa; */
+}
+.cart__infoQtyAll {
+  padding: 5px 10px;
+  border-left: 1px solid #d5d8d8;
+  border-right: 1px solid #d5d8d8;
+  /* background: #dfdfdf;
+  border: 1px solid #c2c2c2; */
+}
+.cart__infoDelete {
+  font-size: 12px;
+  border-left: 1px solid #00718c;
+  padding-left: 10px;
+  color: #00718c;
+  cursor: pointer;
+}
+.cart__infoDelete:hover {
+  text-decoration: underline;
+}
+.cart__price {
+  position: absolute;
+  top: 20px;
+  right: 0;
+}

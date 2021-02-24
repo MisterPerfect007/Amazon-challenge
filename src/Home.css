@@ -1,0 +1,10 @@
+.home {
+  max-width: 1500px;
+  margin: 0 auto;
+  background-color: #eaeded;
+}
+.home__row {
+  display: flex;
+  margin: 0 10px;
+  max-width: 100%;
+}

@@ -1,0 +1,32 @@
+.checkout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  /* border: 1px solid red; */
+  background: #fff;
+  max-width: 300px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+.checkout__info {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.checkout__checkbox {
+  width: 100%;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+.checkout__checkbox > span {
+  font-size: 13px;
+  margin-left: 5px;
+}
+.checkout > button {
+  width: 100%;
+  margin: 0 auto;
+}
