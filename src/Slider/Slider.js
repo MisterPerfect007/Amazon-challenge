@@ -40,16 +40,6 @@ const Slider = (props) => {
             resetTransition();
         }
     }
-    // const leftHandler = () =>{
-    //     if(activeIndex > 0){
-    //         setActiveIndex(activeIndex - 1)
-    //     }
-    //     else if (activeIndex === 0){
-    //         setTransition(0)
-    //         setActiveIndex(props.images.length - 1)
-    //         resetTransition();
-    //     }
-    // }
     const resetTransition = () => setTimeout(() => setTransition(0.5),500)
     //Listen for resizise th screen width
     window.addEventListener('resize',() => {
@@ -83,6 +73,9 @@ const sliderCss = css`
     // margin: 0 auto;
     overflow: hidden;
     z-index: 0;
+    @media screen and (max-width: 500px) {
+        margin-bottom: -10%;
+    }
     `
 
 export default Slider;

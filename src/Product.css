@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  max-width: 100%;
+  /* max-width: 100%; */
   background: #fff;
   padding: 20px;
   margin: 10px;
@@ -29,8 +29,9 @@
   width: 100%;
 }
 .product__image {
-  width: 100%;
-  height: 150px;
+  max-width: 200px;
+  min-width: 100px;
+  /* height: 150px; */
   object-fit: contain;
 }
 .product__btn {
@@ -46,4 +47,17 @@
 .product__btn:hover {
   background: linear-gradient(#f1d68f, #f0c14c);
   /* background: #f0c14c; */
+}
+@media screen and (max-width: 500px) {
+  .product {
+    padding: 10px;
+    margin: 5px;
+  }
+  .product__title {
+    font-size: 13px;
+  }
+  .product__image {
+    min-width: 100px;
+    max-width: 100px;
+  }
 }

@@ -55,7 +55,7 @@ function CartItem(props) {
                     <div className="cart__infoQty">
                         <div className="cart__infoQtyMinus unselectable" onClick={handleMinus}>-</div>
                         <span className="cart__infoQtyAll unselectable" >{amount}</span>
-                        <div className="cart__infoQtyPlus unselectable" onClick={handlePlus}>+</div>
+                        <div className="cart__infoQtyPlus unselectable  " onClick={handlePlus}>+</div>
                     </div>
                     <div className="cart__infoDelete" onClick={handleDelete}>Delete</div>
                 </div>

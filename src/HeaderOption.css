@@ -1,0 +1,24 @@
+.header__option {
+  color: #fff;
+  display: flex;
+  /* display: none; */
+  /* margin: 0 10px; */
+}
+.header__optionEl {
+  display: flex;
+  flex-direction: column;
+  margin: 0 10px;
+  color: #fff;
+}
+.header__optionLineOne {
+  font-size: 10px;
+}
+.header__optionLineTwo {
+  font-size: 13px;
+  font-weight: 600;
+}
+@media screen and (max-width: 700px) {
+  .header__option {
+    display: none;
+  }
+}
