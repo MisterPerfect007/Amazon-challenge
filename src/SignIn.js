@@ -18,7 +18,6 @@ function SignIn(props) {
     const history = useHistory();
     const onSubmit = async () => {
         setBtnDisabled(true)
-        console.log(btnDisabled);
         await auth
             .signInWithEmailAndPassword(email, password)
             .then(auth => {

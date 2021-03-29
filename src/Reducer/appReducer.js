@@ -44,7 +44,6 @@ function appReducer(state = initialeState, action){
                 basket: action.payload
             }
         case 'SET_USER':
-            console.log(">>>>", action.payload);
             return {
                 ...state,
                 user: action.payload

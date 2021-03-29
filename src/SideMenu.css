@@ -70,6 +70,22 @@
   width: 80%;
   border-bottom: 1px solid rgb(182, 182, 182);
 }
+.sideMenu__hello {
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: 10px;
+  white-space: nowrap;
+}
+.sideMenu__hello > span {
+  color: #febd69;
+}
+.sideMenu__log {
+  color: #000;
+  margin-top: 10px;
+  font-weight: 500;
+  text-decoration: underline;
+  cursor: pointer;
+}
 .sideMenu__signin > span {
   margin-left: 10px;
   font-weight: 500;

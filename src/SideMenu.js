@@ -3,16 +3,35 @@ import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import SearchIcon from '@material-ui/icons/Search';
 import CloseIcon from '@material-ui/icons/Close';
 import './SideMenu.css';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { animated } from 'react-spring';
+import { connect } from 'react-redux';
 
-function SideMenu({style, handleMenuState}) {
+const mapState = (state) => {
+    return {
+        user: state.user
+    }
+}
+const mapDispatch = (dispatch) => {
+    return {
+        deleteUser: (action) => dispatch(action)
+    }
+}
+
+function SideMenu({style, handleMenuState, user, deleteUser}) {
     const contentRef = useRef(null)
     const handleClick = (e) => {
         if(e.target === contentRef.current){ 
             handleMenuState();
         }
     }
+    const logOut = () => {
+        deleteUser({
+            type: 'SET_USER',
+            payload: null
+        })
+    }
+    const location = useLocation()
     return (
         <animated.div className="sideMenu" style={style} onClick={handleClick} ref={contentRef}>
             <div className="sideMenu__content" >
@@ -36,14 +55,24 @@ function SideMenu({style, handleMenuState}) {
                 </div>
             </Link> */}
                 <Link to={user? location.pathname : "/signin"}>
-                    <div className="">
+                    <div className="sideMenu__signin">
                         <AccountCircleIcon />
-                        <span className="">Hello{user && `, ${user.email}`}</span>
+                        {
+                            <h2 className="sideMenu__hello">Hello,<span>{user?  `${user.email}` : "Sign in"}</span></h2>
+
+                        }
                     </div>
                 </Link>
+                        {
+                            user && <span 
+                                        className="sideMenu__log" 
+                                        onClick={logOut}
+                                    >Log out</span>
+
+                        }
             </div>
         </animated.div>
     )
 }
 
-export default SideMenu
+export default connect(mapState, mapDispatch) (SideMenu)
