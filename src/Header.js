@@ -32,11 +32,7 @@ function Header(props) {
     const handleMenuState = () => {
         setVisibleMenu(!visibleMenu);
     }
-    // //function to hidden some components when window.innerWidth < 700px
-    // const handleScreen = () => {
-    //     window.innerWidth < 700? setSmallScreen(true):setSmallScreen(false);
-    // }
-    // window.addEventListener('resize', handleScreen);
+    
     return (
         <div className="header">
             <SideMenu style={anim} handleMenuState={handleMenuState}/>

@@ -26,10 +26,19 @@ function SideMenu({style, handleMenuState}) {
                         <SearchIcon />
                     </div>
                 </div>
-                <Link to="/signin">
-                    <div className="sideMenu__signin">
+                {/* <Link to={user? location.pathname : "/signin"}>
+                <div 
+                    className="header__optionEl" 
+                    onClick={user && deleteUser}
+                >
+                    <span className="header__optionLineOne">Hello{user && `, ${user.email}`}</span>
+                    <span className="header__optionLineTwo">{user? 'Log out' : 'Sign in'}</span>
+                </div>
+            </Link> */}
+                <Link to={user? location.pathname : "/signin"}>
+                    <div className="">
                         <AccountCircleIcon />
-                        <span>Hello, Sign In</span>
+                        <span className="">Hello{user && `, ${user.email}`}</span>
                     </div>
                 </Link>
             </div>

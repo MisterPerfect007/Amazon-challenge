@@ -2,10 +2,18 @@
   padding: 20px 20px;
   background: #fff;
 }
+.cartFull__hello {
+  margin: 0;
+  font-weight: 500;
+}
+.cartFull__hello > span {
+  color: #febd69;
+}
 .cartFull__header {
   position: relative;
   height: 55px;
   border-bottom: 1px solid #dddddd;
+  margin-top: 10px;
 }
 .cartFull__header > h1 {
   margin-top: 0;

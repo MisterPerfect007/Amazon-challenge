@@ -6,11 +6,12 @@ import Checkout from './Checkout'
 
 const mapState = (state) =>{
     return {
-        basket: state.basket
+        basket: state.basket,
+        user: state.user
     }
 }
 function CartFull(props) {
-    const {basket} = props
+    const {basket, user} = props
     let totalPrice = 0;
     let totalAmount = 0;
     basket.forEach(item => {
@@ -21,8 +22,11 @@ function CartFull(props) {
         <>
             <div className="cartFull">
                 <div className="cartFull-container">
+                    {
+                        user && <h2 className="cartFull__hello">Hello, <span>{user.email}</span></h2>
+                    }
                     <div className="cartFull__header">
-                        <h1>Shopping Cart</h1>
+                        <h1>Your Shopping Cart</h1>
                         <span>Price</span>
                     </div>
                     <div className="cartFull__content">

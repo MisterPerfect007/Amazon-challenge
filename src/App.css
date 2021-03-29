@@ -41,6 +41,11 @@
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
 }
+.disabled-btn {
+  background: linear-gradient(#faecc8bd, #f0c24cb9);
+  color: #8d9096;
+  cursor: not-allowed;
+}
 /* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

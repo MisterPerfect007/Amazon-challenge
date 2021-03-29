@@ -1,6 +1,7 @@
 
 const initialeState = {
-    basket: []
+    basket: [],
+    user: null
 }
 
 function appReducer(state = initialeState, action){
@@ -36,6 +37,17 @@ function appReducer(state = initialeState, action){
             return {
                 ...state,
                 basket: state.basket.filter(item => item.id !== action.payload.id)
+            }
+        case 'SET_BASKET':
+            return {
+                ...state,
+                basket: action.payload
+            }
+        case 'SET_USER':
+            console.log(">>>>", action.payload);
+            return {
+                ...state,
+                user: action.payload
             }
         default: return state
     }
